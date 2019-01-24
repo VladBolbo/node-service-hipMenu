@@ -10,22 +10,31 @@
     "@types/express": "^4.16.0",
     "@types/jest": "^23.3.2",
     "@types/mongoose": "^5.2.17",
+    "bcrypt": "^3.0.3",
+    "cookie-parser": "^1.4.3",
+    "express-session": "^1.15.6",
     "jest": "^23.6.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.4",
+    "pg": "^7.8.0",
+    "sequelize": "^4.42.0",
     "ts-jest": "^23.10.3",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.3"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bootstrap": "^4.2.1",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
-    "mongoose": "^5.3.7"
+    "mongoose": "^5.3.7",
+    "pug": "^2.0.3"
   },
   "scripts": {
     "build": "tsc",
     "start": "ts-node ./src/index.ts",
-    "dev": "nodemon --watch src/**/*.ts --ignore tests/**/*.spec.ts --exec",
+    "dev": "nodemon -e pug,js,ts --ignore tests/**/*.spec.ts --exec",
+    "dev2": "nodemon --watch src/**/*.ts --ignore tests/**/*.spec.ts --exec",
     "prod": "npm run ruild && npm run start",
     "test": "jest --verbose --coverage",
     "test:update": "jest --verbose --coverage --updateSnapshot",

@@ -70,4 +70,14 @@ export class RestaurantController {
             });
     }
 
+    public sort() {
+        return Restaurant.find().sort({name: 1} ).limit(50)
+        .then(result => {
+            return result;
+        }) 
+        .catch(err => {
+            return err;
+        });
+    }
+
 }
