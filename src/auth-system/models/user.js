@@ -6,7 +6,7 @@ var bcrypt = require('bcrypt');
 
 //var sequelize = new Sequelize('postgres://postgres@localhost:5432/auth-system');
 
-const sequelize = new Sequelize('postgres://postgres:taurus09@localhost:5432/auth-system', {
+const sequelize = new Sequelize('postgres://postgres:parola123@localhost:5432/auth-system', {
     host: 'localhost',
     dialect: 'postgres',
   
